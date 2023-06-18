@@ -4,7 +4,7 @@ package com.han.atm.batter.domain;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "COMM_CD")
+@Table(name = "TB_COMM_CD")
 @IdClass(CommCdId.class)
 public class CommCd {
     @Id

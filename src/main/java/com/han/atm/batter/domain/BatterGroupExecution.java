@@ -5,7 +5,7 @@ import com.han.atm.common.domain.BaseEntity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "BATTER_GROUP_EXECUTION")
+@Table(name = "TB_BATTER_GROUP_EXECUTION")
 public class BatterGroupExecution extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

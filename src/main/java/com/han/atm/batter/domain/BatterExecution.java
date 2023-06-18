@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "BATTER_EXECUTION")
+@Table(name = "TB_BATTER_EXECUTION")
 public class BatterExecution extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

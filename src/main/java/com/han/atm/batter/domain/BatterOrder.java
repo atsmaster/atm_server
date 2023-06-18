@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "BATTER_ORDER")
+@Table(name = "TB_BATTER_ORDER")
 public class BatterOrder extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

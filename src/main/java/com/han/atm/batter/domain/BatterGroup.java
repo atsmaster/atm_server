@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 @Entity
 @Setter
 @Getter
-@Table(name = "BATTER_GROUP")
+@Table(name = "TB_BATTER_GROUP")
 public class BatterGroup extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
