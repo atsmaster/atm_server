@@ -26,7 +26,6 @@ public class SimpleTest {
         parameters.put("side", "BUY");
         parameters.put("type", "MARKET");
         parameters.put("quantity", "19.7");
-        parameters.put("leverage", "5");
 
         try {
             String result = client.account().newOrder(parameters);

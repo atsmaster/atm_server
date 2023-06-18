@@ -5,23 +5,18 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.io.FileReader;
-import java.io.IOException;
-
 @Configuration
 public class BinanceConfig {
-
-
-    @Value("${binance.future.api-key-path}")
-    private String apiKeyPath;
+    @Value("${binance.future.api-key}")
+    private String apiKey;
+    @Value("${binance.future.secret-key}")
+    private String secKey;
+    @Value("${binance.future.base-url}")
+    private String baseUrl;
 
     @Bean
-    public UMFuturesClientImpl uMFuturesClientImpl() throws IOException {
-        try(FileReader fileReader = new FileReader(apiKeyPath)){
-
-        }
-        UMFuturesClientImpl client = new UMFuturesClientImpl();
-
+    public UMFuturesClientImpl uMFuturesClientImpl() {
+        UMFuturesClientImpl client = new UMFuturesClientImpl(apiKey, secKey, baseUrl);
         return client;
     }
 

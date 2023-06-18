@@ -2,7 +2,10 @@ package com.han.atm.batter;
 
 import com.binance.connector.futures.client.impl.UMFuturesClientImpl;
 import com.han.atm.batter.dto.BatterGroupDto;
+import com.han.atm.config.cache.CacheService;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,10 +16,10 @@ public class BatterController {
 
     private final BatterService batterService;
 
-//    private final UMFuturesClient uMFuturesClient;
+    private final UMFuturesClientImpl client;
 
-    private final UMFuturesClientImpl uMFuturesClientImpl;
-
+    private final CacheService cacheService;
+    private static final Logger logger = LoggerFactory.getLogger(BatterController.class);
     @GetMapping("/group")
     public ResponseEntity<BatterGroupDto> findBatterGroup(@RequestBody BatterGroupDto request) {
         return ResponseEntity.ok().body(batterService.findBatterGroup(request));
@@ -30,7 +33,11 @@ public class BatterController {
 
     @GetMapping("/clientTest")
     public ResponseEntity<BatterGroupDto> clientTest(@RequestParam String testval) {
-        uMFuturesClientImpl.account().newOrder(null);
+
+        String aa = cacheService.getBinaceFutureListenKey();
+
+//        String result = client.userData().createListenKey();
+//        logger.info(result);
         return null;
     }
 }
