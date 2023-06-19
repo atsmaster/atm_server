@@ -16,11 +16,11 @@ public class BatterOrder extends BaseEntity {
     @Column(name = "ORDER_SYMBOL")
     private String orderSymbol;
 
-    @Column(name = "ORDER_POSITION_CODE")
-    private String orderPositionCode;
+    @Column(name = "ORDER_POSITION_CD")
+    private String orderPositionCd;
 
-    @Column(name = "ORDER_TYPE_CODE")
-    private String orderTypeCode;
+    @Column(name = "ORDER_TYPE_CD")
+    private String orderTypeCd;
 
     @Column(name = "ORDER_DT")
     private Timestamp orderDt;
@@ -31,8 +31,8 @@ public class BatterOrder extends BaseEntity {
     @Column(name = "ORDER_QUANTITY")
     private BigDecimal orderQuantity;
 
-    @Column(name = "ORDER_STATUS_CODE")
-    private String orderStatusCode;
+    @Column(name = "ORDER_STATUS_CD")
+    private String orderStatusCd;
 
     @Column(name = "TRANSACTION_DT")
     private Timestamp transactionDt;

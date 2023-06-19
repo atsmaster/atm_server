@@ -19,8 +19,8 @@ public class BatterExecution extends BaseEntity {
     @Column(name = "BATTING_SYMBOL")
     private String battingSymbol;
 
-    @Column(name = "BATTING_STATUS_CODE")
-    private String battingStatusCode;
+    @Column(name = "BATTING_STATUS_CD")
+    private String battingStatusCd;
 
     @Column(name = "BATTING_AMOUNT")
     private BigDecimal battingAmount;

@@ -16,7 +16,7 @@ public class CommCd {
     private String commCd;
 
     @Basic
-    @Column(name = "CODE_CD_NAME")
-    private String codeCdName;
+    @Column(name = "COMM_CD_NAME")
+    private String commCdName;
 
 }
