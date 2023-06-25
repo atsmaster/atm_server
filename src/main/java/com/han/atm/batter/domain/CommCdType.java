@@ -5,19 +5,15 @@ import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
-@Table(name = "TB_COMM_CD")
-@IdClass(CommCdId.class)
-public class CommCd {
+@Table(name = "TB_COMM_CD_TYPE")
+public class CommCdType {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "COMM_CD_TYPE")
     private String commCdType;
-
-    @Id
-    @Column(name = "COMM_CD")
-    private String commCd;
     
-    @Column(name = "COMM_CD_NAME")
-    private String commCdName;
+    @Column(name = "COMM_CD_TYPE_NAME")
+    private String commCdTypeName;
     
     @Column(name = "CREATED_DTTM")
     private Timestamp createdDttm;

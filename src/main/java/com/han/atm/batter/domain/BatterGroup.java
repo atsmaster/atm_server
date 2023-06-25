@@ -1,34 +1,32 @@
 package com.han.atm.batter.domain;
 
-import com.han.atm.common.domain.BaseEntity;
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.sql.Timestamp;
+import java.util.Objects;
 
 @Entity
-@Setter
-@Getter
 @Table(name = "TB_BATTER_GROUP")
-public class BatterGroup extends BaseEntity {
+public class BatterGroup {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "BATTER_GROUP_ID")
-    private String batterGroupId;
+    private int batterGroupId;
+    
     @Column(name = "BATTER_GROUP_NAME")
     private String batterGroupName;
+    
     @Column(name = "BATTER_COUNT")
-    private Byte batterCount;
-    @Column(name = "FIRST_BATTING_PRICE")
-    private BigDecimal firstBattingPrice;
-    @Column(name = "TAKE_PROFIT_RATE")
-    private BigDecimal takeProfitRate;
-    @Column(name = "STOP_LOSS_RATE")
-    private BigDecimal stopLossRate;
-    @Column(name = "RETRY_INCREMENT_PRICE_RATE")
-    private BigDecimal retryIncrementPriceRate;
+    private Integer batterCount;
+    
     @Column(name = "TOTAL_FUNDS")
     private BigDecimal totalFunds;
+    
+    @Column(name = "CREATED_DTTM")
+    private Timestamp createdDttm;
+    
+    @Column(name = "MODIFIED_DTTM")
+    private Timestamp modifiedDttm;
+
 
 }
