@@ -3,7 +3,6 @@ package com.han.atm.batter.domain;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
-import java.util.Objects;
 
 @Entity
 @Table(name = "TB_BATTER_ORDER")
@@ -11,7 +10,10 @@ public class BatterOrder {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "ORDER_ID")
-    private String orderId;
+    private int orderId;
+
+    @Column(name = "EXCHANGE_ORDER_ID")
+    private String exchangeOrderId;
     
     @Column(name = "BATTER_EXECUTION_ID")
     private int batterExecutionId;
