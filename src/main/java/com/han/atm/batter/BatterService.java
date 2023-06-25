@@ -1,5 +1,6 @@
 package com.han.atm.batter;
 
+import com.han.atm.batter.domain.BatterGroup;
 import com.han.atm.batter.dto.BatterGroupDto;
 import com.han.atm.batter.repository.BatterGroupRepository;
 import lombok.RequiredArgsConstructor;
